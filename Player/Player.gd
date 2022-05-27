@@ -1,24 +1,13 @@
 extends KinematicBody2D
 
-const speed = 250
-var velocity = Vector2()
+export var speed: = 250
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_pressed("move_down"):
-		velocity.y = speed
-	elif Input.is_action_pressed("move_up"):
-		velocity.y = -speed
-	else:
-		velocity.y = 0
+	var direction: = calc_direction()
+	move_and_slide(direction * speed)
 	
-	if Input.is_action_pressed("move_left"):
-		velocity.x = -speed
-	elif Input.is_action_pressed("move_right"):
-		velocity.x = speed
-	else:
-		velocity.x = 0
-	
-
-	
-	velocity = move_and_slide(velocity)
-	
+func calc_direction() -> Vector2:
+	var vel: = Vector2.ZERO
+	vel.y = Input.get_axis("move_up","move_down")
+	vel.x = Input.get_axis("move_left","move_right")
+	return vel
