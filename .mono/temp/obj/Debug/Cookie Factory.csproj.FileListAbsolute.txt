@@ -1,0 +1,9 @@
+C:\Users\stolk\Desktop\Workspaces\Godot\Cookie-Factory\.mono\temp\bin\Debug\Cookie Factory.dll
+C:\Users\stolk\Desktop\Workspaces\Godot\Cookie-Factory\.mono\temp\bin\Debug\Cookie Factory.pdb
+C:\Users\stolk\Desktop\Workspaces\Godot\Cookie-Factory\.mono\temp\obj\Debug\Cookie Factory.csproj.AssemblyReference.cache
+C:\Users\stolk\Desktop\Workspaces\Godot\Cookie-Factory\.mono\temp\obj\Debug\Cookie Factory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stolk\Desktop\Workspaces\Godot\Cookie-Factory\.mono\temp\obj\Debug\Cookie Factory.AssemblyInfoInputs.cache
+C:\Users\stolk\Desktop\Workspaces\Godot\Cookie-Factory\.mono\temp\obj\Debug\Cookie Factory.AssemblyInfo.cs
+C:\Users\stolk\Desktop\Workspaces\Godot\Cookie-Factory\.mono\temp\obj\Debug\Cookie Factory.csproj.CoreCompileInputs.cache
+C:\Users\stolk\Desktop\Workspaces\Godot\Cookie-Factory\.mono\temp\obj\Debug\Cookie Factory.dll
+C:\Users\stolk\Desktop\Workspaces\Godot\Cookie-Factory\.mono\temp\obj\Debug\Cookie Factory.pdb

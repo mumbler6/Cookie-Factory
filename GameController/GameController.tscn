@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameController/BuildHandler.gd" type="Script" id=4]
+
+[node name="GameController" type="Node"]
+
+[node name="WorldGrid" type="Node" parent="."]
+
+[node name="GridSpace" type="Node" parent="WorldGrid"]
+
+[node name="Utils" type="Node" parent="."]
+
+[node name="BuildHandler" type="Node" parent="."]
+script = ExtResource( 4 )

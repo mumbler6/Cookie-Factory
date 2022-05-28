@@ -4,7 +4,7 @@ export var speed: = 250
 
 func _physics_process(delta: float) -> void:
 	var direction: = calc_direction()
-	move_and_slide(direction * speed)
+	move_and_slide(direction * speed * delta * 60) # 60 fps
 	
 func calc_direction() -> Vector2:
 	var vel: = Vector2.ZERO
