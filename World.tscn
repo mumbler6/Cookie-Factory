@@ -1,13 +1,36 @@
+<<<<<<< HEAD
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameController/GameController.tscn" type="PackedScene" id=2]
+=======
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Structures/ConveyorBelt.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cookies_and_Ingredients/Cookie.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World.gd" type="Script" id=4]
+>>>>>>> e81f0e5b6379946ce571db9728acc7c52079f2ef
 
 [node name="World" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+<<<<<<< HEAD
 position = Vector2( 512, 300 )
 
 [node name="GameController" parent="." instance=ExtResource( 2 )]
 
 [editable path="GameController"]
+=======
+position = Vector2( 209, 107 )
+
+[node name="ConveyorBelt" parent="." instance=ExtResource( 2 )]
+position = Vector2( 249, 111 )
+
+[node name="Cookie" parent="." instance=ExtResource( 3 )]
+position = Vector2( 351, 111 )
+
+[node name="ConveyorBelt2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 370, 111 )
+>>>>>>> e81f0e5b6379946ce571db9728acc7c52079f2ef
