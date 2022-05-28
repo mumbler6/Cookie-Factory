@@ -8,7 +8,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var instance = load("res://Objects/BlockGhost.tscn").instance()
+	var instance = load("res://Objects/Structures/BlockGhost/BlockGhost.tscn").instance()
 	add_child(instance)
 
 
