@@ -4,11 +4,5 @@
 
 [node name="GameController" type="Node"]
 
-[node name="WorldGrid" type="Node" parent="."]
-
-[node name="GridSpace" type="Node" parent="WorldGrid"]
-
-[node name="Utils" type="Node" parent="."]
-
-[node name="BuildHandler" type="Node" parent="."]
+[node name="BuildHandler" type="Node2D" parent="."]
 script = ExtResource( 1 )

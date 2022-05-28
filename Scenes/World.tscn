@@ -9,8 +9,7 @@
 [node name="World" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 209, 107 )
+[node name="GameController" parent="." instance=ExtResource( 5 )]
 
 [node name="ConveyorBelt" parent="." instance=ExtResource( 2 )]
 position = Vector2( 249, 111 )
@@ -21,6 +20,7 @@ position = Vector2( 351, 111 )
 [node name="ConveyorBelt2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 370, 111 )
 
-[node name="GameController" parent="." instance=ExtResource( 5 )]
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 209, 107 )
 
 [editable path="GameController"]
