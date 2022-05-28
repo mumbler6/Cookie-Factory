@@ -1,10 +1,12 @@
 extends KinematicBody2D
 
 export var speed: = 250
+var added_velocity = Vector2()
 
 func _physics_process(delta: float) -> void:
-	var direction: = calc_direction()
-	move_and_slide(direction * speed)
+	var direction = calc_direction()
+	var velocity = direction * speed + added_velocity
+	move_and_slide(velocity)
 	
 func calc_direction() -> Vector2:
 	var vel: = Vector2.ZERO
