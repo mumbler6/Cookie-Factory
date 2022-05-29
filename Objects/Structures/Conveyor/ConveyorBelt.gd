@@ -8,9 +8,14 @@ var speed = 100
 
 # collision detection 
 
-func _on_ConveyorBelt_body_entered(body: Node) -> void:
-	var velocity = speed * direction 
-	body.added_velocity = velocity
-
 func _on_ConveyorBelt_body_exited(body: Node) -> void:
 	body.added_velocity = Vector2.ZERO
+	
+func handle_overlapping_bodies():
+	var velocity = speed * direction 
+	var overlapping_bodies = get_overlapping_bodies()
+	for body in overlapping_bodies:
+		body.added_velocity = velocity
+
+func _physics_process(delta: float) -> void:
+	handle_overlapping_bodies()
