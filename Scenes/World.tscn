@@ -15,7 +15,7 @@ script = ExtResource( 4 )
 position = Vector2( 249, 111 )
 
 [node name="Cookie" parent="." instance=ExtResource( 3 )]
-position = Vector2( 351, 111 )
+position = Vector2( 351, 108 )
 
 [node name="ConveyorBelt2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 400, 111 )
