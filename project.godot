@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Cookie",
 "language": "GDScript",
-"path": "res://Objects/Cookies_and_Ingredients/BasicCookie/Cookie.gd"
+"path": "res://Objects/Cookies_and_Ingredients/Cookie.gd"
 }, {
 "base": "",
 "class": "GitAPI",
