@@ -9,13 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Cookie",
+"language": "GDScript",
+"path": "res://Objects/Cookies_and_Ingredients/BasicCookie/Cookie.gd"
+}, {
 "base": "",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Objects/Player/Player.gd"
 } ]
 _global_script_class_icons={
-"GitAPI": ""
+"Cookie": "",
+"GitAPI": "",
+"Player": ""
 }
 
 [application]
@@ -69,7 +81,8 @@ right_click={
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Cookies and Ingredients"
-2d_physics/layer_3="Conveyor Belts and Structures"
+2d_physics/layer_3="Conveyor Belts"
+2d_physics/layer_4="Structures"
 
 [physics]
 

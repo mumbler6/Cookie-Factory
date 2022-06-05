@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Cookie
 
 var added_velocity = Vector2()
 
