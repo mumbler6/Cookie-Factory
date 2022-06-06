@@ -9,10 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Cookie",
+"class": "Butter",
+"language": "GDScript",
+"path": "res://Objects/Cookies_and_Ingredients/Butter.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Cookie",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Cookie.gd"
+}, {
+"base": "Cookie",
+"class": "Egg",
+"language": "GDScript",
+"path": "res://Objects/Cookies_and_Ingredients/Egg.gd"
+}, {
+"base": "Cookie",
+"class": "Flour",
+"language": "GDScript",
+"path": "res://Objects/Cookies_and_Ingredients/Flour.gd"
 }, {
 "base": "",
 "class": "GitAPI",
@@ -23,11 +38,20 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://Objects/Player/Player.gd"
+}, {
+"base": "Cookie",
+"class": "Sugar",
+"language": "GDScript",
+"path": "res://Objects/Cookies_and_Ingredients/Sugar.gd"
 } ]
 _global_script_class_icons={
+"Butter": "",
 "Cookie": "",
+"Egg": "",
+"Flour": "",
 "GitAPI": "",
-"Player": ""
+"Player": "",
+"Sugar": ""
 }
 
 [application]
