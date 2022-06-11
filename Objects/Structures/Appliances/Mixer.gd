@@ -8,46 +8,61 @@ var recipe_dict = {"basic": {"flour": 1, "eggs": 2, "butter": 1, "sugar": 1}}
 # should be able to change what cookie you are making
 var setting = "basic"
 
-var current_ingredients = {}
+var input = {}
+var output = {}
 
 func _process(delta: float) -> void:
 	var current_recipe = recipe_dict[setting]
-	
 	if has_enough(current_recipe):
-		make_cookie(current_recipe)
-		print("make cookie")
+		make_product(current_recipe)
+		
+		# if there is an output conveyor belt nearby...
+		empty_output()
 
-# checks if current_ingredients has equal or more than required
+# checks if input has equal or more than required
 func has_enough(current_recipe) -> bool:
-	if current_ingredients.size() != current_recipe.size():
+	if input.size() != current_recipe.size():
 		return false
-	if current_ingredients.hash() == current_recipe.hash():
+	if input.hash() == current_recipe.hash():
 		return true
 		
-	for key in current_ingredients.keys():
-		if current_ingredients[key] < current_recipe[key]:
+	for key in input.keys():
+		if !current_recipe.has(key) or input[key] < current_recipe[key]:
 			return false
 			
 	return true
 
-# subtract only what you need, can also spawn cookie in this function
-func make_cookie(current_recipe) -> void:
-	for key in current_ingredients.keys():
-		current_ingredients[key] -= current_recipe[key]
+# subtract from input one recipe worth of ingredients
+func make_product(current_recipe) -> void:
+	for key in input.keys():
+		input[key] -= current_recipe[key]
+	add_object("basic", output)
+	print(output)
 
-# adds ingredient to current_ingredients
-func add_ingredient(body_class) -> void:
-	if current_ingredients.has(body_class):
-		current_ingredients[body_class] += 1
+# actually creates an instance of product that can be moved onto conveyor belt
+func empty_output() -> void:
+	var product = load("res://Objects/Cookies_and_Ingredients/" \
+		+ "Cookie.tscn").instance()
+	output[product.get_class()] -= 1
+	product.position = position + direction * 50
+	product.is_product = true
+	get_tree().get_root().add_child(product)
+	print(output)
+	
+# adds body to map
+func add_object(body_class, dict) -> void:
+	if dict.has(body_class):
+		dict[body_class] += 1
 	else:
-		current_ingredients[body_class] = 1
+		dict[body_class] = 1
 
 func _on_Mixer_body_entered(body: Node) -> void:
-	var body_class = body.get_class()
-	add_ingredient(body_class)
-	print(current_ingredients)
-	body.queue_free()
+	# dont accidentally delete product
+	if body.is_product == false:
+		var body_class = body.get_class()
+		add_object(body_class, input)
+		print(input)
+		body.queue_free()
 
-# spawned cookie needs to stop after leaving
 func _on_Mixer_body_exited(body: Node) -> void:
-	body.added_velocity = 0
+	body.is_product = false

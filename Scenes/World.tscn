@@ -33,7 +33,7 @@ script = ExtResource( 4 )
 [node name="GameController" parent="." instance=ExtResource( 5 )]
 
 [node name="Cookie" parent="." instance=ExtResource( 3 )]
-position = Vector2( 325, 65 )
+position = Vector2( 351, 60 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 492, 290 )
