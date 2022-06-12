@@ -7,6 +7,6 @@ var is_product = false
 func get_class():
 	return "basic"
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	move_and_slide(added_velocity)
 	

@@ -2,6 +2,7 @@ extends Node2D
 
 
 
+
 var ghostInstance: Node
 
 onready var worldGridScript = load("res://GameController/WorldGrid.cs")

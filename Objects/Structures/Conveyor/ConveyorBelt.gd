@@ -17,5 +17,5 @@ func handle_overlapping_bodies():
 	for body in overlapping_bodies:
 		body.added_velocity = velocity
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	handle_overlapping_bodies()

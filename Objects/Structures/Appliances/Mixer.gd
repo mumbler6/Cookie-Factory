@@ -11,7 +11,7 @@ var setting = "basic"
 var input = {}
 var output = {}
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var current_recipe = recipe_dict[setting]
 	if has_enough(current_recipe):
 		make_product(current_recipe)

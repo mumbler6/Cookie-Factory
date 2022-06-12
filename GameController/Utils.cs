@@ -3,7 +3,7 @@ using System;
 
 public class Utils : Node
 {
-	// Called when the node enters the scene tree for the first time.
+	
 
 	public static Vector2 RoundToNearest100(Vector2 vec)
 	{

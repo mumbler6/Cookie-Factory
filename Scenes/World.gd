@@ -6,7 +6,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass # commented out because im writing this in another function (buildhandler)
 	#var mouse_pos = get_viewport().get_mouse_position()
 	#if Input.is_action_pressed("right_click"):
