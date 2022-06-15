@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Objects/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Images/bricks_grey.jpg" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Objects/Cookies_and_Ingredients/Butter.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/Cookies_and_Ingredients/Flour.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Cookies_and_Ingredients/Sugar.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/Structures/Conveyor/ConveyorBelt.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "bricks_grey.jpg 0"
@@ -33,7 +34,7 @@ script = ExtResource( 4 )
 [node name="GameController" parent="." instance=ExtResource( 5 )]
 
 [node name="Cookie" parent="." instance=ExtResource( 3 )]
-position = Vector2( 351, 60 )
+position = Vector2( 372, 58 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 492, 290 )
@@ -65,5 +66,26 @@ position = Vector2( 341, 185 )
 
 [node name="Egg2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 388, 185 )
+
+[node name="Egg3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 185, 181 )
+
+[node name="Butter2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 172, 182 )
+
+[node name="Flour3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 222, 183 )
+
+[node name="Flour4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 242, 183 )
+
+[node name="Sugar2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 155, 181 )
+
+[node name="Egg4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 202, 181 )
+
+[node name="ConveyorBelt" parent="." instance=ExtResource( 11 )]
+position = Vector2( 782, 187 )
 
 [editable path="GameController"]
