@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GameController/BuildHandler.gd" type="Script" id=1]
+[ext_resource path="res://Resources/PlacableObjects/Conveyor.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/PlacableObjects/Mixer.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Ingredients/Flour.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Ingredients/Butter.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Ingredients/Sugar.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Ingredients/Egg.tres" type="Resource" id=7]
 
 [node name="GameController" type="Node"]
 
 [node name="BuildHandler" type="Node2D" parent="."]
 script = ExtResource( 1 )
+build_list = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 6 ) ]

@@ -1,10 +1,9 @@
 using Godot;
-using System;
 
 public class PlacableObject : Resource
 {
 	[Export]
-	public string _name { get; set; }
+	public string _displayName { get; set; }
 
 	[Export]
 	public Vector2 _footprint { get; set; }
@@ -13,11 +12,13 @@ public class PlacableObject : Resource
 	public bool _rotatable { get; set; }
 
 	[Export]
-	public Node _model { get; set; }
+	public PackedScene _model { get; set; }
+	
+	public string _type = "placableObject";
 
-	public PlacableObject(string name, Vector2 footprint, bool rotatable, Node model)
+	public PlacableObject(string name, Vector2 footprint, bool rotatable, PackedScene model)
 	{
-		_name = name;
+		_displayName = name;
 		_footprint = footprint;
 		_rotatable = rotatable;
 		_model = model;
@@ -25,7 +26,7 @@ public class PlacableObject : Resource
 
 	public PlacableObject()
 	{
-		_name = "name";
+		_displayName = "name";
 		_footprint = new Vector2(1, 1);
 		_rotatable = true;
 		_model = null;

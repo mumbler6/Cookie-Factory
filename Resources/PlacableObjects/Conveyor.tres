@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Resources/PlacableObjects/PlacableObject.cs" type="Script" id=1]
+[ext_resource path="res://Objects/Structures/Conveyor/ConveyorBelt.tscn" type="PackedScene" id=2]
+
+[resource]
+script = ExtResource( 1 )
+_displayName = "Conveyor"
+_footprint = Vector2( 1, 1 )
+_rotatable = true
+_model = ExtResource( 2 )
