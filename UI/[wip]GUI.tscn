@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/label_bg.png" type="Texture" id=1]
+[ext_resource path="res://UI/temp_ui_field.png" type="Texture" id=2]
+
+[node name="GUI" type="MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+
+[node name="Counters" type="HBoxContainer" parent="HBoxContainer"]
+
+[node name="Count" type="MarginContainer" parent="HBoxContainer/Counters"]
+
+[node name="Background" type="NinePatchRect" parent="HBoxContainer/Counters/Count"]
+texture = ExtResource( 1 )
+
+[node name="Icon" type="TextureRect" parent="HBoxContainer/Counters/Count/Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+
+[node name="Number" type="Label" parent="HBoxContainer/Counters/Count/Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "10"
