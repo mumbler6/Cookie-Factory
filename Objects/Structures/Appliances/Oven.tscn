@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Images/icon.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Images/oven.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Structures/Appliances/Oven.gd" type="Script" id=2]
 [ext_resource path="res://Objects/Structures/Appliances/Timer.gd" type="Script" id=3]
 
