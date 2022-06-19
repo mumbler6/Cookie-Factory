@@ -1,4 +1,4 @@
-extends Cookie
+extends Ingredient
 class_name Sugar
 
 func get_class():

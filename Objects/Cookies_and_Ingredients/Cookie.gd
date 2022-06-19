@@ -1,12 +1,9 @@
-extends KinematicBody2D
+extends Ingredient
 class_name Cookie
 
-var added_velocity = Vector2()
-var is_product = false
+var is_raw = true
 
 func get_class():
 	return "basic"
 
-func _physics_process(_delta: float) -> void:
-	move_and_slide(added_velocity)
 	

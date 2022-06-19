@@ -3,67 +3,67 @@ using System.Collections.Generic;
 
 public class WorldGrid : Node
 {
-    private static Dictionary<Vector2, GridSpace> gridSpaces = new Dictionary<Vector2, GridSpace>();
+	private static Dictionary<Vector2, GridSpace> gridSpaces = new Dictionary<Vector2, GridSpace>();
 
 
 
-    public static bool GridSpaceExists(Vector2 position)
-    {
-        Vector2 gridPosition = Utils.RoundToNearest100(position);
-        return gridSpaces.ContainsKey(gridPosition);
-    }
+	public static bool GridSpaceExists(Vector2 position)
+	{
+		Vector2 gridPosition = Utils.RoundToNearest100(position);
+		return gridSpaces.ContainsKey(gridPosition);
+	}
 
-    public static GridSpace FindNearestGridSpace(Vector2 position) // finds closest grid space given coordinates, return null if not
-    {
-        if (GridSpaceExists(position))
-        {
-            Vector2 gridPosition = Utils.RoundToNearest100(position);
-            return gridSpaces[gridPosition];
-        }
-        return null;
-    }
+	public static GridSpace FindNearestGridSpace(Vector2 position) // finds closest grid space given coordinates, return null if not
+	{
+		if (GridSpaceExists(position))
+		{
+			Vector2 gridPosition = Utils.RoundToNearest100(position);
+			return gridSpaces[gridPosition];
+		}
+		return null;
+	}
 
-    public static void DeleteSpace(GridSpace gridSpace)
-    {
-        Vector2 position = gridSpace.GridPosition();
-        if (GridSpaceExists(position))
-        {
-            gridSpace.DestroyNode();
-            gridSpaces.Remove(position);
-        }
-    }
+	public static void DeleteSpace(GridSpace gridSpace)
+	{
+		Vector2 position = gridSpace.GridPosition();
+		if (GridSpaceExists(position))
+		{
+			gridSpace.DestroyNode();
+			gridSpaces.Remove(position);
+		}
+	}
 
-    public static void DeleteSpace(Vector2 position)
-    {
-        if (GridSpaceExists(position))
-        {
-            GridSpace g = FindNearestGridSpace(position);
-            g.DestroyNode();
-            gridSpaces.Remove(position);
-        }
-    }
+	public static void DeleteSpace(Vector2 position)
+	{
+		if (GridSpaceExists(position))
+		{
+			GridSpace g = FindNearestGridSpace(position);
+			g.DestroyNode();
+			gridSpaces.Remove(position);
+		}
+	}
 
-    public static bool AddSpace(GridSpace gridSpace)
-    {
-        Vector2 position = gridSpace.GridPosition();
-        if (!GridSpaceExists(position))
-        {
-            gridSpaces.Add(position, gridSpace);
-            return true;
-        }
-        return false;
-    }
+	public static bool AddSpace(GridSpace gridSpace)
+	{
+		Vector2 position = gridSpace.GridPosition();
+		if (!GridSpaceExists(position))
+		{
+			gridSpaces.Add(position, gridSpace);
+			return true;
+		}
+		return false;
+	}
 
-    public static bool AddSpace(Vector2 position, Node2D obj)
-    {
-        if (!GridSpaceExists(position))
-        {
-            gridSpaces.Add(position, new GridSpace(position, obj));
-            return true;
-        }
-        return false;
-    }
-    /*
+	public static bool AddSpace(Vector2 position, Node2D obj)
+	{
+		if (!GridSpaceExists(position))
+		{
+			gridSpaces.Add(position, new GridSpace(position, obj));
+			return true;
+		}
+		return false;
+	}
+	/*
 		public Dictionary<string, GridSpace> FindAdjacentOccupied(Vector3 position) // add overload for currplacingobject case!!!!!
 		{
 			Vector3 centerBlock = Utils.RoundToNearestTen(position);

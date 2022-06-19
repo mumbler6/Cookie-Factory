@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource( 1 )
-_displayName = "Mixer"
+_displayName = "name"
 _footprint = Vector2( 1, 1 )
 _rotatable = true
 _model = ExtResource( 2 )
