@@ -40,13 +40,14 @@ func _process(_delta: float) -> void:
 	for i in range(10):
 		if (Input.is_action_just_pressed("press_" + str(i))):
 			selected_object_id = (i + 9) % 10
+			
 			break
 
 	# check for LMB
 	if (Input.is_action_just_pressed("left_click") && placingCooldownCounter <= 0):
 		placingCooldownCounter = placingCooldown
 		if selected_object_id >= build_list.size():
-			print("placable object does not exist at index" + str(selected_object_id))
+			print("placable object does not exist at index: " + str(selected_object_id))
 		else:
 			var placed: bool = place_object(build_list[selected_object_id], nearestGrid)
 

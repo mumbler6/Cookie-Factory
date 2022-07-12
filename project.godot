@@ -14,7 +14,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Objects/Structures/Appliances/Appliance.gd"
 }, {
-"base": "Ingredient",
+"base": "Cookie",
 "class": "Butter",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Butter.gd"
