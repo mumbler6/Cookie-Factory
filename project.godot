@@ -24,12 +24,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Cookie.gd"
 }, {
-"base": "Ingredient",
+"base": "Cookie",
 "class": "Egg",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Egg.gd"
 }, {
-"base": "Ingredient",
+"base": "Cookie",
 "class": "Flour",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Flour.gd"
@@ -45,11 +45,6 @@ _global_script_classes=[ {
 "path": "res://Objects/Cookies_and_Ingredients/Ingredient.gd"
 }, {
 "base": "Appliance",
-"class": "Mixer",
-"language": "GDScript",
-"path": "res://Objects/Structures/Appliances/Mixer.gd"
-}, {
-"base": "Appliance",
 "class": "Oven",
 "language": "GDScript",
 "path": "res://Objects/Structures/Appliances/Oven.gd"
@@ -59,7 +54,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Objects/Player/Player.gd"
 }, {
-"base": "Ingredient",
+"base": "Cookie",
 "class": "Sugar",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Sugar.gd"
@@ -72,7 +67,6 @@ _global_script_class_icons={
 "Flour": "",
 "GitAPI": "",
 "Ingredient": "",
-"Mixer": "",
 "Oven": "",
 "Player": "",
 "Sugar": ""
@@ -81,7 +75,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Cookie Factory"
-run/main_scene="res://Scenes/World.tscn"
+run/main_scene="res://Scenes/TestingWorld.tscn"
 config/icon="res://Assets/Images/icon.png"
 
 [gdnative]
