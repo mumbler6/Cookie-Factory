@@ -46,6 +46,7 @@ func _process(_delta: float) -> void:
 		
 	ghostInstance.scale = footprint
 	
+	# moves selected gridposition down and to the left to center the placable object
 	var mousePos: = get_global_mouse_position()
 	var gridOffset = 50 * Vector2(-footprint.x, footprint.y)
 	var nearestGrid = utilsObj.RoundToNearest100(mousePos + gridOffset)
