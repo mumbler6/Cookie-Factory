@@ -5,7 +5,6 @@
 [node name="BlockGhost" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.439216 )
-position = Vector2( 50, -50 )
-scale = Vector2( 0.391, 0.391 )
+position = Vector2( 150, -100 )
+scale = Vector2( 1.173, 0.782 )
 texture = ExtResource( 1 )

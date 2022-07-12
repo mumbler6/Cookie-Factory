@@ -31,18 +31,28 @@ func _process(_delta: float) -> void:
 	# ensures spam placing not possible
 	if placingCooldownCounter > 0:
 		placingCooldownCounter -= _delta
-
-	var mousePos: = get_global_mouse_position()
-	var nearestGrid = utilsObj.RoundToNearest100(mousePos)
-	ghostInstance.position = nearestGrid
-
 	# check for number key presses
 	for i in range(10):
 		if (Input.is_action_just_pressed("press_" + str(i))):
 			selected_object_id = (i + 9) % 10
-			
 			break
+	
+	# check for size of selected object
+	var footprint: Vector2
+	if selected_object_id < build_list.size() && build_list[selected_object_id]._type =="placableObject":
+		footprint = build_list[selected_object_id]._footprint
+	else:
+		footprint = Vector2(1, 1)
+		
+	ghostInstance.scale = footprint
+	
+	var mousePos: = get_global_mouse_position()
+	var gridOffset = 50 * Vector2(-footprint.x, footprint.y)
+	var nearestGrid = utilsObj.RoundToNearest100(mousePos + gridOffset)
+	ghostInstance.position = nearestGrid
 
+			
+	
 	# check for LMB
 	if (Input.is_action_just_pressed("left_click") && placingCooldownCounter <= 0):
 		placingCooldownCounter = placingCooldown
@@ -64,9 +74,8 @@ func place_object(object: Resource, nearestGrid: Vector2) -> bool:
 
 	# allows placing of ingredients [debug]
 	if object._type == "placableObject":
-		var placed: bool = worldGridObj.AddSpace(nearestGrid, objectInstance)
+		var placed: bool = worldGridObj.TryPlaceObject(nearestGrid, object._footprint, objectInstance)
 		if !placed:
 			objectInstance.queue_free()
 		return placed
-	else:
-		return true
+	return true

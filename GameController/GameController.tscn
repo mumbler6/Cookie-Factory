@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GameController/BuildHandler.gd" type="Script" id=1]
 [ext_resource path="res://Resources/PlacableObjects/Conveyor.tres" type="Resource" id=2]
@@ -8,9 +8,10 @@
 [ext_resource path="res://Resources/Ingredients/Sugar.tres" type="Resource" id=6]
 [ext_resource path="res://Resources/Ingredients/Egg.tres" type="Resource" id=7]
 [ext_resource path="res://Resources/PlacableObjects/Oven.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/PlacableObjects/LargeBlock.tres" type="Resource" id=9]
 
 [node name="GameController" type="Node"]
 
 [node name="BuildHandler" type="Node2D" parent="."]
 script = ExtResource( 1 )
-build_list = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 6 ) ]
+build_list = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 9 ) ]

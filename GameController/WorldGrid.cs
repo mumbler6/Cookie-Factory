@@ -42,7 +42,8 @@ public class WorldGrid : Node
 			gridSpaces.Remove(position);
 		}
 	}
-
+	
+	// depreciated
 	public static bool AddSpace(GridSpace gridSpace)
 	{
 		Vector2 position = gridSpace.GridPosition();
@@ -53,7 +54,8 @@ public class WorldGrid : Node
 		}
 		return false;
 	}
-
+	
+	// depreciated
 	public static bool AddSpace(Vector2 position, Node2D obj)
 	{
 		if (!GridSpaceExists(position))
@@ -62,6 +64,31 @@ public class WorldGrid : Node
 			return true;
 		}
 		return false;
+	}
+	
+	public static bool TryPlaceObject(Vector2 position, Vector2 footprint, Node2D obj)
+	{
+		// check for position validity
+		for (int xOffset = 0; xOffset < footprint.x; xOffset++)
+		{
+			for (int yOffset = 0; yOffset < footprint.y; yOffset++)
+			{
+				if (GridSpaceExists(position + 100 * new Vector2(xOffset, yOffset)))
+				{
+					return false;
+				}
+			}
+		}
+		// add grid spaces
+		for (int xOffset = 0; xOffset < footprint.x; xOffset++)
+		{
+			for (int yOffset = 0; yOffset < footprint.y; yOffset++)
+			{
+				Vector2 offsetPosition = position + 100 * new Vector2(xOffset, yOffset);
+				gridSpaces.Add(offsetPosition, new GridSpace(offsetPosition, obj));
+			}
+		}
+		return true;
 	}
 	/*
 		public Dictionary<string, GridSpace> FindAdjacentOccupied(Vector3 position) // add overload for currplacingobject case!!!!!
