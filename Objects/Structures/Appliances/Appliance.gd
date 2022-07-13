@@ -45,7 +45,7 @@ func make_product(current_recipe) -> void:
 # actually creates an instance of product that can be moved onto conveyor belt
 func empty_output() -> void:
 	var product = load("res://Objects/Cookies_and_Ingredients/" \
-		+ "Cookie.tscn").instance() # might have to change scene names to modify
+		+ setting + ".tscn").instance() # might have to change scene names to modify
 	output.pop_front()
 	product.position = position + direction * 100
 	product.is_product = true
@@ -53,7 +53,6 @@ func empty_output() -> void:
 	print(output)
 
 func _on_Timer_timeout() -> void:
-	print("make cookie")
 	timer.stop()
 	make_product(current_recipe)
 	is_idle = true

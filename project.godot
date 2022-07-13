@@ -17,12 +17,17 @@ _global_script_classes=[ {
 "base": "Ingredient",
 "class": "Basic",
 "language": "GDScript",
-"path": "res://Objects/Cookies_and_Ingredients/Cookie.gd"
+"path": "res://Objects/Cookies_and_Ingredients/Basic.gd"
 }, {
 "base": "Ingredient",
 "class": "Butter",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Butter.gd"
+}, {
+"base": "Area2D",
+"class": "CookieCollector",
+"language": "GDScript",
+"path": "res://Objects/Structures/CookieCollector.gd"
 }, {
 "base": "Ingredient",
 "class": "Egg",
@@ -73,6 +78,7 @@ _global_script_class_icons={
 "Appliance": "",
 "Basic": "",
 "Butter": "",
+"CookieCollector": "",
 "Egg": "",
 "Flour": "",
 "GitAPI": "",

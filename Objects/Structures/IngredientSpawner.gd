@@ -22,11 +22,9 @@ func spawn_ingredient():
 	get_tree().get_root().add_child(product)
 		
 func _on_IngredientSpawner_body_entered(body: Node) -> void:
-	print("something in")
 	has_output_room = false
 
 func _on_IngredientSpawner_body_exited(body: Node) -> void:
-	print("something left")
 	has_output_room = true
 	
 func _on_Timer_timeout() -> void:
