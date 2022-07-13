@@ -4,8 +4,8 @@ class_name Appliance
 var direction = Vector2(1, -.5)
 
 # dictionary that holds all recpies, only has the basic one for now, overrided
-var recipe_dict = {"basic": {"flour": 1, "eggs": 2, "butter": 1, "sugar": 1}}
-var setting = "basic"
+var recipe_dict = {"Basic": {"Flour": 1, "Egg": 2, "Butter": 1, "Sugar": 1}}
+var setting = "Basic"
 var current_recipe = recipe_dict[setting]
 
 var is_idle = true
@@ -62,6 +62,6 @@ func _process(_delta: float) -> void:
 	if has_enough(current_recipe) and is_idle:
 		timer.start()
 		is_idle = false
-	if !output.empty() and has_output_room == true:
+	if !output.empty() and has_output_room:
 		empty_output()
 		

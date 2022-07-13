@@ -2,11 +2,11 @@ extends Appliance
 class_name Oven
 
 func get_class():
-	return "oven"
+	return "Oven"
 
 func _init() -> void:
-	recipe_dict = {"basic": {"basic": 1}}
-	setting = "basic"
+	recipe_dict = {"Basic": {"Basic": 1}}
+	setting = "Basic"
 	current_recipe = recipe_dict[setting]
 
 func _on_Oven_body_entered(body: Node) -> void:

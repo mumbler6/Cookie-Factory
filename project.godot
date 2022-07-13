@@ -15,14 +15,14 @@ _global_script_classes=[ {
 "path": "res://Objects/Structures/Appliances/Appliance.gd"
 }, {
 "base": "Ingredient",
+"class": "Basic",
+"language": "GDScript",
+"path": "res://Objects/Cookies_and_Ingredients/Cookie.gd"
+}, {
+"base": "Ingredient",
 "class": "Butter",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Butter.gd"
-}, {
-"base": "Ingredient",
-"class": "Cookie",
-"language": "GDScript",
-"path": "res://Objects/Cookies_and_Ingredients/Cookie.gd"
 }, {
 "base": "Ingredient",
 "class": "Egg",
@@ -43,6 +43,11 @@ _global_script_classes=[ {
 "class": "Ingredient",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Ingredient.gd"
+}, {
+"base": "Area2D",
+"class": "IngredientSpawner",
+"language": "GDScript",
+"path": "res://Objects/Structures/IngredientSpawner.gd"
 }, {
 "base": "Appliance",
 "class": "Mixer",
@@ -66,12 +71,13 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Appliance": "",
+"Basic": "",
 "Butter": "",
-"Cookie": "",
 "Egg": "",
 "Flour": "",
 "GitAPI": "",
 "Ingredient": "",
+"IngredientSpawner": "",
 "Mixer": "",
 "Oven": "",
 "Player": "",

@@ -2,12 +2,12 @@ extends Appliance
 class_name Mixer
 
 func get_class():
-	return "mixer"
+	return "Mixer"
 
 func _init() -> void:
-	recipe_dict = {"basic": {"flour": 1, "eggs": 2, "butter": 1, "sugar": 1}}
+	recipe_dict = {"Basic": {"Flour": 1, "Egg": 2, "Butter": 1, "Sugar": 1}}
 
-	setting = "basic"
+	setting = "Basic"
 	current_recipe = recipe_dict[setting]
 
 func _on_Mixer_body_entered(body: Node) -> void:
