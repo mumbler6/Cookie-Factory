@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource( 1 )
-_displayName = "name"
+_displayName = "Oven"
 _footprint = Vector2( 1, 1 )
 _rotatable = true
 _model = ExtResource( 2 )
