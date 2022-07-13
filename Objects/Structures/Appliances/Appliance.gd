@@ -1,7 +1,7 @@
 extends Area2D
 class_name Appliance
 
-var direction = Vector2(1, 0)
+var direction = Vector2(1, -.5)
 
 # dictionary that holds all recpies, only has the basic one for now, overrided
 var recipe_dict = {"basic": {"flour": 1, "eggs": 2, "butter": 1, "sugar": 1}}
@@ -10,7 +10,8 @@ var current_recipe = recipe_dict[setting]
 
 var is_idle = true
 var input = {}
-var output = {}
+var output = []
+var has_output_room = true
 
 onready var timer = get_node("Timer")
 
@@ -38,15 +39,15 @@ func has_enough(current_recipe) -> bool:
 func make_product(current_recipe) -> void:
 	for key in input.keys():
 		input[key] -= current_recipe[key]
-	add_object("basic", output)
+	output.push_back(setting)
 	print(output)
 
 # actually creates an instance of product that can be moved onto conveyor belt
 func empty_output() -> void:
 	var product = load("res://Objects/Cookies_and_Ingredients/" \
-		+ "Cookie.tscn").instance()
-	output[product.get_class()] -= 1
-	product.position = position + direction * 50
+		+ "Cookie.tscn").instance() # might have to change scene names to modify
+	output.pop_front()
+	product.position = position + direction * 100
 	product.is_product = true
 	get_tree().get_root().add_child(product)
 	print(output)
@@ -55,12 +56,12 @@ func _on_Timer_timeout() -> void:
 	print("make cookie")
 	timer.stop()
 	make_product(current_recipe)
-	
-	# if there is an output conveyor belt nearby...
-	empty_output()
 	is_idle = true
 
 func _process(_delta: float) -> void:
 	if has_enough(current_recipe) and is_idle:
 		timer.start()
 		is_idle = false
+	if !output.empty() and has_output_room == true:
+		empty_output()
+		

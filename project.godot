@@ -14,7 +14,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Objects/Structures/Appliances/Appliance.gd"
 }, {
-"base": "Cookie",
+"base": "Ingredient",
 "class": "Butter",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Butter.gd"
@@ -24,12 +24,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Cookie.gd"
 }, {
-"base": "Cookie",
+"base": "Ingredient",
 "class": "Egg",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Egg.gd"
 }, {
-"base": "Cookie",
+"base": "Ingredient",
 "class": "Flour",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Flour.gd"
@@ -45,6 +45,11 @@ _global_script_classes=[ {
 "path": "res://Objects/Cookies_and_Ingredients/Ingredient.gd"
 }, {
 "base": "Appliance",
+"class": "Mixer",
+"language": "GDScript",
+"path": "res://Objects/Structures/Appliances/Mixer.gd"
+}, {
+"base": "Appliance",
 "class": "Oven",
 "language": "GDScript",
 "path": "res://Objects/Structures/Appliances/Oven.gd"
@@ -54,7 +59,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Objects/Player/Player.gd"
 }, {
-"base": "Cookie",
+"base": "Ingredient",
 "class": "Sugar",
 "language": "GDScript",
 "path": "res://Objects/Cookies_and_Ingredients/Sugar.gd"
@@ -67,6 +72,7 @@ _global_script_class_icons={
 "Flour": "",
 "GitAPI": "",
 "Ingredient": "",
+"Mixer": "",
 "Oven": "",
 "Player": "",
 "Sugar": ""
