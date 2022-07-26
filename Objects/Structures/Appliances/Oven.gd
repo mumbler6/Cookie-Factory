@@ -12,8 +12,7 @@ func _init() -> void:
 func _on_Oven_body_entered(body: Node) -> void:
 	# dont accidentally delete product
 	if body.is_product == false:
-		var body_class = body.get_class()
-		add_object(body_class, input)
+		add_object(body.get_class(), input)
 		print(input)
 		body.queue_free()
 	elif body.is_product == true:
